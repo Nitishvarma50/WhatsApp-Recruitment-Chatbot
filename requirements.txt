@@ -1,0 +1,11 @@
+fastapi
+uvicorn[standard]
+python-dotenv
+pydantic
+twilio
+openai
+pymongo
+firebase-admin
+apscheduler
+httpx 
+python-multipart

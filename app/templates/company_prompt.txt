@@ -1,0 +1,6 @@
+Based on your location preference, we currently have openings in the following companies.  
+Please choose the company or companies you'd like to apply to:  
+- TCS  
+- WNS  
+- Concentrix  
+- Teleperformance 
