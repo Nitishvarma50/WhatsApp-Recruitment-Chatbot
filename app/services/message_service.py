@@ -19,8 +19,11 @@ def send_whatsapp_message(to: str, body: str):
 def handle_incoming_message(data):
     from_number = data.get("From")
     body = data.get("Body")
-    if not from_number or not body:
-        print("Missing 'From' or 'Body' in incoming data:", data)
+    # Allow empty body for media messages, but require a from_number
+    if from_number is None:
+        print("Missing 'From' in incoming data:", data)
         return
+
+    # TODO: Add logic to differentiate between text and media messages
     print(f"Received from {from_number}: {body}")
     send_whatsapp_message(from_number, load_template("initial_message.txt").format(candidate_name="Candidate")) 
